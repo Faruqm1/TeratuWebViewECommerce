@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>    
+    <link rel="icon" href="img/logokcl.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="css/stylecontent.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js" defer></script>
+    <script>
+        function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                });
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', 'header.html');
+            loadHTML('#footer', 'footer.html');
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.button');
+            const products = document.querySelectorAll('.product');
+    
+            let anyButtonActive = false;
+    
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    const isActive = this.classList.contains('active');
+                    if (isActive) {
+                        this.classList.remove('active');
+                        anyButtonActive = false;
+                    } else {
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        anyButtonActive = true;
+                    }
+                    products.forEach(product => {
+                        if (anyButtonActive) {
+                            if (product.classList.contains(filter)) {
+                                product.style.display = 'block';
+                            } else {
+                                product.style.display = 'none';
+                            }
+                        } else {
+                            product.style.display = 'block';
+                        }
+                    });
+                    document.querySelector('.content-product').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            products.forEach(product => {
+                product.style.display = 'block';
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <section class="slider">
+        <a href="halaman-baru.html">
+            <img src="img/Makeup/banner.png" alt="Slide 1">
+        </a>
+    </section>
+    <section class="content-product">
+        <div class="sidebar">
+            <a class="button" data-filter="powder">Face Powder</a>
+            <a class="button" data-filter="concealer">Concealer</a>
+        </div>
+        <div class="products-container">
+            <h2>Make up</h2>
+            <div class="products">
+                <a href="/product-detail/serum-concealer.html" class="product concealer">
+                    <img src="img/Makeup/product1.png" alt="Product 1">
+                    <div class="product-info">
+                        <p class="product-name">Clear & Cover <br>Serum Concealer</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/compact-powder.html" class="product powder">
+                    <img src="img/Makeup/product2.png" alt="Product 2">
+                    <div class="product-info">
+                        <p class="product-name">Matte Blur Set Translucent Compact Powder</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+</body>
+</html>

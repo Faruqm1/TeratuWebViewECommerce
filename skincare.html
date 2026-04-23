@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Teratu Beauty </title>
+    <link rel="icon" href="img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">   
+    <link rel="stylesheet" href="css/stylecontent.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                });
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.button');
+            const products = document.querySelectorAll('.product');
+    
+            let anyButtonActive = false;
+    
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    const isActive = this.classList.contains('active');
+                    if (isActive) {
+                        this.classList.remove('active');
+                        anyButtonActive = false;
+                    } else {
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        anyButtonActive = true;
+                    }
+                    products.forEach(product => {
+                        if (anyButtonActive) {
+                            if (product.classList.contains(filter)) {
+                                product.style.display = 'block';
+                            } else {
+                                product.style.display = 'none';
+                            }
+                        } else {
+                            product.style.display = 'block';
+                        }
+                    });
+                    document.querySelector('.content-product').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            products.forEach(product => {
+                product.style.display = 'block';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <section class="slider">
+        <a href="halaman-baru.html">
+            <img src="img/Skincare/banner.png" alt="Slide 1">
+        </a>
+    </section>
+    <section class="content-product">
+        <div class="sidebar">
+            <a class="button" data-filter="serum">Serum Series</a>
+            <a class="button" data-filter="cleanser">Cleansers</a>
+            <a class="button" data-filter="toner">Toner</a>
+            <a class="button" data-filter="moisturizer">Moisturizer</a>
+            <a class="button" data-filter="eye-treatment">Eye Treatment</a>
+            <a class="button" data-filter="sunscreen">Sunscreen</a>
+        </div>
+        <div class="products-container">
+            <h2>SKINCARE</h2>
+            <div class="products">
+                <a href="../product-detail/intensiveacnesolution.html" class="product serum">
+                    <img src="img/Skincare/product1.png" alt="Product 1">
+                    <div class="product-info">
+                        <p class="product-name">Intensive Acne Solution</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="../product-detail/skinbarier.html" class="product serum">
+                    <img src="img/Skincare/product2.png" alt="Product 2">
+                    <div class="product-info">
+                        <p class="product-name">Skin Barrier Serum</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/toner.html" class="product toner">
+                    <img src="img/Skincare/product3.png" alt="Product 3">
+                    <div class="product-info">
+                        <p class="product-name">The Gift of Rose<br></p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/chamomile.html" class="product cleanser">
+                    <img src="img/Skincare/product4.png" alt="Product 4">
+                    <div class="product-info">
+                        <p class="product-name">Chamomile & Olive Deep Cleansing Oil</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/eye-treatment.html" class="product eye-treatment">
+                    <img src="img/Skincare/product5.png" alt="Product 5">
+                    <div class="product-info">
+                        <p class="product-name">Brightening Hydrating Caffeine Eye Cream</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/moist-sunscreen.html" class="product sunscreen">
+                    <img src="img/Skincare/product6.png" alt="Product 6">
+                    <div class="product-info">
+                        <p class="product-name">UV Protect Moist Sunscreen<br>SPF 30 PA++++</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/bright-darkspotserum.html" class="product serum">
+                    <img src="img/Skincare/product7.png" alt="Product 7">
+                    <div class="product-info">
+                        <p class="product-name">Brightening & Dark Spot Serum</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+                <a href="/product-detail/moisturizer.html" class="product moisturizer">
+                    <img src="img/Skincare/product8.png" alt="Product 8">
+                    <div class="product-info">
+                        <p class="product-name">Daily Calm & Soothe <br> Skin Moisturizer</p>
+                        <span class="see-more">View More</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+</body>
+</html>

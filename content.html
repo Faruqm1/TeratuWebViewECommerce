@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Content</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">   
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.content-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+}
+.content-item {
+    flex: 1;
+    margin: 20px;
+    position: relative;
+    width: calc(25% - 20px); /* Menyesuaikan ukuran dengan margin */
+}
+
+.content-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.content-item a {
+    display: block;
+    position: relative;
+}
+
+.content-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.content-item a:hover .overlay {
+    opacity: 1; 
+}
+
+.overlay-text {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.product-tile__badges {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.badge {
+    align-content: center;
+    background-color: rgb(185, 14, 14);
+    display: grid;
+    font-size: 8pt;
+    font-weight: 400;
+    height: 20px;
+    justify-content: center;
+    padding: 0 6px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.badge--badgetext {
+    border-radius: .25rem;
+    color: white;
+}
+
+.product-info {
+    padding: 10px;
+    background: #f9f9f9;
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.product-name {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bolder;
+    margin: 0;
+    padding: 5px 0;
+}
+.product-artikel {
+    color: black;
+    font-weight: 400;
+    font-size: 9pt;
+    margin: 0;
+    text-align: left;
+}
+
+.see-more {
+    display: inline-block;
+    font-size: 12px;
+    color: grey;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="content-item">
+            <a href="/product-detail/serum-concealer.html">
+                <img src="img/content1.png" alt="Content 1">
+                <div class="product-tile__badges">
+                    <div class="badge">
+                        <span class="badge--badgetext">New Product</span>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">Serum Concealer</div>
+                </div>
+            </a>
+            <div class="product-info">
+                <p class="product-name">CLEAR & COVER SERUM CONCEALER</p>
+                <p class="product-artikel">FULL COVERAGE CONCEALER! Serum sekaligus Concealer dengan dengan medium to full coverage, no creasing, blendable, dan memiliki kemampuan oil control<br>#CoverWithoutBreakout</p>
+                <a href="/product-detail/serum-concealer.html" class="see-more">View More</a>
+            </div>
+        </div>
+        <div class="content-item">
+            <a href="/product-detail/compact-powder.html">
+                <img src="img/content2.png" alt="Content 2">
+                <div class="product-tile__badges">
+                    <div class="badge">
+                        <span class="badge--badgetext">New Product</span>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">Translucent Compact Powder</div>
+                </div>
+            </a>
+            <div class="product-info">
+                <p class="product-name">TRANSLUCENT COMPACT POWDER</p>
+                <p class="product-artikel">FAVORIT ACNE PRONE SKIN! Bedak padat dengan kandungan skincare yang dapat menyamarkan pori-pori sekaligus merawat kulit berjerawat. Dengan improved formula dari Matte Blur Set Loose Powder</p>
+                <a href="/product-detail/compact-powder.html" class="see-more">View More</a>
+            </div>
+        </div>
+        <div class="content-item">
+            <a href="/product-detail/skinbarier.html">
+                <img src="img/content3.png" alt="Content 3">
+                <div class="product-tile__badges">
+                    <div class="badge">
+                        <span class="badge--badgetext">Best Seller</span>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="overlay-text">Serum Skin Barier</div>
+                </div>
+            </a>
+            <div class="product-info">
+                <p class="product-name">SKIN BARIER SERUM</p>
+                <p class="product-artikel">PALING DICARI! Serum yang diformulasikan untuk menyembuhkan skin barrier yang rusak, meredakan kemerahan akibat iritasi, menyamarkan dark spots sekaligus mencerahkan, menutrisi, dan melembutkan kulit.</p>
+                <a href="/product-detail/skinbarier.html" class="see-more">View More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

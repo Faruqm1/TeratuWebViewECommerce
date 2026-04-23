@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">   
+    <style>
+        /* Style yang ada sebelumnya */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #containerSlider {
+            position: relative;
+            width: 100%;
+            padding: 93px 54px 0px 54px;
+            box-sizing: border-box;
+        }
+
+        #containerSlider img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media(max-width: 732px) {
+            #containerSlider img {
+                height: 12em;
+            }
+        }
+
+        @media(max-width: 500px) {
+            #containerSlider img {
+                height: 10em;
+            }
+        }
+
+        .slick-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex !important;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .slick-dots li {
+            margin: 0;
+        }
+
+        .slick-dots button {
+            background-color: white;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #ccc; 
+        }
+
+        .slick-dots .slick-active button {
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="containerSlider">
+            <div class="slidingImage">
+                <a href="#3" class="scroll-to-target">
+                    <img src="img/img1.png" alt="image1">
+                </a>
+            </div>
+            <div class="slidingImage">
+                <a href="" class="scroll-to-target">
+                    <img src="img/img2.png" alt="image2">
+                </a>
+            </div>
+            <div class="slidingImage">
+                <a href="" class="scroll-to-target">
+                    <img src="img/img3.png" alt="image3">
+                </a>
+            </div>
+            <div class="slidingImage">
+                <a href="" class="scroll-to-target">
+                    <img src="img/img4.png" alt="image4">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#containerSlider').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 15000
+            });
+        });
+    </script>
+</body>
+</html>

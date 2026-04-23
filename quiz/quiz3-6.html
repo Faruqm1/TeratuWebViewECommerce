@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Konsultasi</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%; /* Agar gambar tidak melebihi lebar kontainer */
+            height: auto; /* Menjaga rasio aspek gambar */
+            display: block; /* Menghindari ruang tambahan di bawah gambar */
+        }
+
+        .horizontal-bar {
+            position: fixed;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1140px;
+            height: 14px;
+            background-color: black;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .overlay-img {
+            position: absolute;
+            top: -10px;
+            width: 34px;
+            height: 34px;
+        }
+
+        .overlay-img-1 { left: 40px; }
+        .overlay-img-2 { left: calc(40px + 34px + 172px); }
+        .overlay-img-3 { left: calc(40px + 34px + 172px + 34px + 172px); }
+        .overlay-img-4 { left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px); }
+        .overlay-img-5 { left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px); }
+        .overlay-img-6 { left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px); }
+
+        .text-container {
+            position: relative;
+            top: 190px;
+            left: 76px;
+            font-weight: 700;
+            font-size: 26pt;            
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            max-width: 1140px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            margin-bottom: 50px;
+        }
+
+        .result-container {
+            position: absolute;
+            top: calc(200px + 120px); /* Atur posisi berdasarkan margin-bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .table-container {
+            max-width: 150px;
+            max-height: 20px;    
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 900px;
+            margin-bottom: 50px;
+        }
+
+        .finish-button {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 15px 70px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18pt;
+            transition: background-color 0.3s ease;
+        }
+
+        .finish-button:hover {
+            background-color: white;
+            color: black; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);   
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/skinquiz.png" alt="Skin Quiz">
+    </div>
+
+    <div class="horizontal-bar">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-1">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-2">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-3">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-4">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-5">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-6">
+    </div>
+
+    <div class="text-container">
+        Skincare Schedule For You
+    </div>
+
+    <div class="result-container" id="result-content">
+        <!-- Content from result file will be loaded here -->
+    </div>
+    <div class="button-container">
+        <a href="../index.html" class="finish-button">SELESAI</a>
+    </div>
+    
+    <script>
+    function loadResultPage(result) {
+        const resultContent = document.getElementById('result-content');
+        const resultFile = `/quiz/result/result-${result}.html`; // Construct the file name based on the result parameter
+
+        fetch(resultFile)
+            .then(response => response.text())
+            .then(html => {
+                resultContent.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading the result page:', error);
+                resultContent.innerHTML = '<p>Error loading result content.</p>';
+            });
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const result = urlParams.get('result'); // Get the result parameter from URL
+
+    if (['a', 'b', 'c', 'd'].includes(result)) {
+        loadResultPage(result);
+    } else {
+        document.getElementById('result-content').innerHTML = '<p>Invalid result parameter.</p>';
+    }
+    </script>
+</body>
+</html>

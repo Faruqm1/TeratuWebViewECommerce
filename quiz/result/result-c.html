@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <!DOCTYPE html>
+    <html lang="en">
+    <style>
+        /* Di dalam result-a.html */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: block; /* Pastikan elemen diatur dengan benar */
+        }
+    
+        /* Tambahkan kelas pembungkus jika diperlukan */
+        .table-container {
+            padding: 0px; /* Sesuaikan padding jika diperlukan */
+            box-sizing: border-box; /* Menjaga padding dan border dalam ukuran total */
+        }
+    
+        table {
+            width: 100%; /* Adjust table width to fit container */
+            border-collapse: collapse;
+            table-layout: fixed; /* Ensure columns have a fixed width */
+        }
+    
+        td {
+            width: 170px; /* Set column width */
+            height: 0px;
+            text-align: center;
+            vertical-align: top; /* Default vertical alignment */
+            padding: 5px;
+            border: none; /* Border for table cells */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+    
+        td img {
+            height: 140px;
+            width: auto; /* Menjaga rasio aspek gambar */
+            display: block; /* Menghapus spasi di bawah gambar */
+            margin: 0 auto; /* Menyelaraskan gambar secara horizontal */
+        }
+    
+        td img[src*="day.png"], td img[src*="night.png"] {
+            height: 120px;
+            vertical-align: top; /* Center vertically for specific images */
+        }
+        .title {
+            font-weight: bold;
+            font-size: 16pt;
+            margin-top: 5px;
+            display: block;
+        }
+    
+        .description {
+            font-size: 8pt;
+            margin-top: 5px;
+            line-height: -1pt;
+        }
+        .num {
+            display: inline-block;
+            margin: 20px 0 10px; /* Pastikan elemen memiliki dimensi */
+            width: 30px; /* Atur lebar sesuai kebutuhan */
+            height: 30px; /* Atur tinggi sesuai kebutuhan */
+            line-height: 30px; /* Menyelaraskan teks vertikal di tengah */
+            text-align: center; /* Menyelaraskan teks horizontal di tengah */
+            border-radius: 50%; /* Membuat elemen berbentuk lingkaran */
+            background-color: none; /* Warna latar belakang lingkaran */
+            color: black; /* Warna teks */
+            font-size: 20px; /* Ukuran font */
+            font-weight: bold; /* Ketebalan font */
+            border: 3px solid black; /* Menambahkan garis luar hitam */
+        }
+
+        .clickable-img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .clickable-img:hover {
+            transform: scale(1.1);
+            -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+        }
+
+    
+    
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <tr>
+                <td style="vertical-align: top;">
+                    <img src="../quiz/img/day.png" alt="Day">
+                </td>
+                
+                <td>
+                    <a href="/product-detail/chamomile.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img3.png" alt="Gambar 1" class="clickable-img">
+                    </a>
+                    <span class="num">1</span>
+                    <span class="title">CLEANSER</span>
+                    <div class="description">Chamomile & Olive Deep Cleansing Oil
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/toner.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img6.png" alt="Gambar 2" class="clickable-img">
+                    </a>
+                    <span class="num">2</span>
+                    <span class="title">TONER</span>
+                    <div class="description">The Gift of Rose
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/skinbarier.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img5.png" alt="Gambar 3" class="clickable-img">
+                    </a>
+                    <span class="num">3</span>
+                    <span class="title">SERUM</span>
+                    <div class="description">Skin Barrier Serum
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/moisturizer.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img4.png" alt="Gambar 3" class="clickable-img">
+                    </a>
+                    <span class="num">4</span>
+                    <span class="title">MOISTURIZER</span>
+                    <div class="description">Daily Calm Skin Moisturizer
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/moist-sunscreen.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img7.png" alt="Gambar 3" class="clickable-img">
+                    </a>
+                    <span class="num">5</span>
+                    <span class="title">SUNSCREEN</span>
+                    <div class="description">UV Protect Moist Sunscreen
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <span><br></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <img src="../quiz/img/night.png" alt="Day">
+                </td>
+                <td>
+                    <a href="/product-detail/chamomile.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img3.png" alt="Gambar 1" class="clickable-img">
+                    </a>
+                    <span class="num">1</span>
+                    <span class="title">CLEANSER</span>
+                    <div class="description">Chamomile & Olive Deep Cleansing Oil
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/toner.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img6.png" alt="Gambar 2" class="clickable-img">
+                    </a>
+                    <span class="num">2</span>
+                    <span class="title">TONER</span>
+                    <div class="description">The Gift of Rose
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/skinbarier.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img5.png" alt="Gambar 3" class="clickable-img">
+                    </a>
+                    <span class="num">3</span>
+                    <span class="title">SERUM</span>
+                    <div class="description">Skin Barrier Serum
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/moisturizer.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img4.png" alt="Gambar 3" class="clickable-img">
+                    </a>
+                    <span class="num">4</span>
+                    <span class="title">MOISTURIZER</span>
+                    <div class="description">Daily Calm Skin Moisturizer
+                    </div>
+                </td>
+                <td>
+                    <a href="/product-detail/eye-treatment.html" class="clickable-img">
+                        <img src="../quiz/img/quiz3/img2.png" alt="Gambar 3" class="clickable-img">
+                    </a>
+                    <span class="num">5</span>
+                    <span class="title">EYE CREAM</span>
+                    <div class="description">Brightening Hydrating Caffeine Eye Cream
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

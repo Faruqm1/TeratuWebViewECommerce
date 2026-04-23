@@ -1,0 +1,188 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 12% 55% 33%;
+    padding: 143px 50px 50px;
+}
+
+.button {
+    position: relative;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    height: 64px;
+    width: 160px;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    background: black;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 6px;
+    background-color: black;
+    transition: width 0.5s ease;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}
+
+.button:hover::after {
+    width: 100%;
+}
+
+.button.active {
+    background: white;
+    color: black;
+}
+
+.text-content {
+    padding-left: 51px;
+    padding-right: 110px;
+    z-index: 1;
+    position: relative;
+}
+
+.text-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.text-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 20px;
+}
+.text-content li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 20px;
+}
+.images-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.testimoni img {
+    max-width: 250px;
+    height: auto;
+    margin: 5px;
+}
+
+
+.logo-img {
+    width: 54px;
+    height: auto;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.right-img {
+    width: 54px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.left {
+    width: 100%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.big-img {
+    width: 100%;
+}
+
+.big-img img {
+    width: inherit;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+}
+
+.buttonprev, .buttonnext {
+    position: absolute;
+    bottom: 20%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.buttonprev {
+    left: -7px;
+}
+
+.buttonnext {
+    right: -8px;
+}
+
+.buttonprev img, .buttonnext img {
+    width: 30px;
+    height: auto;
+}
+    
+.card-list .card-item {
+    background: white;
+}
+
+.card-list .card-item .image {
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-list .card-item .image:hover {
+    transform: scale(1.02);
+}
+
+.shop-now-button {
+    display: block;
+    width: 307px;
+    height: 60px;
+    margin: 50px auto 0;
+    margin-bottom: 10px;
+    background-color: #f2f2f2; 
+    color: black;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.shop-now-button:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}

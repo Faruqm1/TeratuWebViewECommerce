@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    padding: 93px 54px 0px 54px;
+    box-sizing: border-box;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-product {
+    display: grid;
+    padding: 20px 50px;
+    padding-bottom: 70px;
+    gap: 20px;
+    grid-template-columns: 24% 76%;
+    scroll-margin-top: 93px;
+}
+
+.sidebar {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.button {
+    position: relative; 
+    display: block;
+    padding-left: 30px;
+    padding: 18.5px;
+    margin-bottom: 15px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 6px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+
+.button:hover {
+    background: white;
+    color: black;
+  }
+
+.button:hover::after {
+    width: 100%;
+  }
+
+.button.active {
+    background: white;
+    color: black;
+}
+
+.products {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+h2{
+    margin: 0px;
+}
+
+.products-container h2 {
+    grid-column: span 3;
+    padding-top: 10px;
+    padding-bottom: 24px;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product p {
+    text-align: left;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.product p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 10px;
+    background: #f9f9f9;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-name {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bolder;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.see-more {
+    display: inline-block;
+    font-size: 12px;
+    color: grey;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.product {
+    flex: 1 1 200px; /* Produk dapat tumbuh dan menyusut, tetapi memiliki lebar dasar */
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    max-width: 310px; /* Batasi ukuran maksimum produk */
+    transition: transform 0.5s ease, box-shadow 0.3s ease; /* Transisi halus */
+}
+
+.product:hover {
+    transform: scale(1.01); /* Memperbesar elemen saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    margin-top: 0px;
+}
+
+.product-info .see-more {
+    display: inline-block;
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transisi halus */
+}
+
+.product-info .see-more:hover {
+    color: black; /* Mengubah warna saat hover */
+    text-decoration: none; /* Menghapus garis bawah saat hover */
+}

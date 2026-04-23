@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>THE GIFT OF ROSE/h1>
+                        <p>The Gift of Rose adalah toner sekaligust face mist. Memiliki pH balanced yang baik untuk all skin types termasuk kulit sensitif. Mengandung Rose Water dan Niacinamide yang dapat mencerahkan kulit wajah. Diperkaya dengan Aloe Vera dan Allantoin yang dapat melembabkan dan menenangkan kulit. Serta Lactic Acid yang membantu merangangsang pertumbuhan sel kulit baru. 
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li> Rose Extract (Vitamin E, Vitamin C, Polifenol dan Flavonoid) : Mengembalikan keseimbangan pH kulit.</li> 
+                        <br>
+                        <li> Niacinamide : Mencerahkan warna kulit.</li> 
+                        <br>
+                        <li> Aloe Vera extract : Mempertahankan kelembapan kulit.</li>
+                        <br>
+                        <li> Lactic Acid : Merangsang pengelupasan sel-sel kulit mati di bagian kulit lapisan terluar (epidermis).</li>
+                        <br>
+                        <li> Allantoin : Mempercepat pertumbuhan sel dan jaringan baru pada kulit.</li>
+                    </ol> 
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>THE GIFT OF ROSE/h1>
+                        <p>The Gift of Rose adalah toner sekaligust face mist. Memiliki pH balanced yang baik untuk all skin types termasuk kulit sensitif. Mengandung Rose Water dan Niacinamide yang dapat mencerahkan kulit wajah. Diperkaya dengan Aloe Vera dan Allantoin yang dapat melembabkan dan menenangkan kulit. Serta Lactic Acid yang membantu merangangsang pertumbuhan sel kulit baru. 
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Aplikasikan produk ke kulit wajah setelah mencuci muka dan ulangi kapanpun kulit membutuhkan hidrasi.</li>
+                        <br>
+                        <li> Dapat digunakan setiap pagi & malam hari.</li>
+                    </ol> 
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>THE GIFT OF ROSE/h1>
+                        <p>The Gift of Rose adalah toner sekaligust face mist. Memiliki pH balanced yang baik untuk all skin types termasuk kulit sensitif. Mengandung Rose Water dan Niacinamide yang dapat mencerahkan kulit wajah. Diperkaya dengan Aloe Vera dan Allantoin yang dapat melembabkan dan menenangkan kulit. Serta Lactic Acid yang membantu merangangsang pertumbuhan sel kulit baru. 
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/skincare/Toner/4.png">
+                            <img src="/product-detail/skincare/Toner/5.png">
+                            <img src="/product-detail/skincare/Toner/6.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+                        <h1>THE GIFT OF ROSE</h1>
+                        <p>The Gift of Rose adalah toner sekaligust face mist. Memiliki pH balanced yang baik untuk all skin types termasuk kulit sensitif. Mengandung Rose Water dan Niacinamide yang dapat mencerahkan kulit wajah. Diperkaya dengan Aloe Vera dan Allantoin yang dapat melembabkan dan menenangkan kulit. Serta Lactic Acid yang membantu merangangsang pertumbuhan sel kulit baru.</p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/skincare/Toner/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Toner/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Toner/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Toner/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

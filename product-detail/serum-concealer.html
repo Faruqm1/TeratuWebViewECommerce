@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>CLEAR & COVER SERUM CONCEALER</h1>
+                        <p>Clear & Cover Serum Concealer adalah lightweight concealer dengan medium to full coverage, no creasing, blendable, dan memiliki kemampuan oil control yang cocok untuk semua jenis kulit termasuk kulit sensitif & berjerawat. Concealer ini membantu menyamarkan tampilan noda bekas jerawat, flek, dark circle, kemerahan pada wajah dan juga membantu meratakan warna kulit yang tidak merata. Diperkaya dengan skincare benefit yang membantu merawat kulit berjerawat. Menghasilkan makeup dengan tampilan yang semi matte finish dan long lasting.</p>
+                        <p> SHADES:</p>
+                        <ul>
+                            <li> Light : Light, neutral undertone.</li>
+                            <li> Medium : medium, warm undertone.</li>
+                            <li> Tan : medium to tan, warm undertone.</li>
+                        </ul>
+                        <p>With Tea Tree Oil, Salicylic Acid, Centella Asiatica Extract, Licorice Extract, Aloe Vera Extract, Allantoin, Hyaluronic Acid, Panthenol, & Tranexamoyl Dipeptide-23.</p>
+
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li>Kombinasi Tea tree oil dan 0,4% Salicylic acid membantu merawat dan mencegah jerawat. Tea tree sebagai antibakteri membantu mengurangi bakteri penyebab jerawat dan salicylic acid membantu membersihkan pori sehingga tidak terjadi penumpukan sel sel kulit mati yang dapat menyebabkan jerawat.</li>
+                        <br>
+                        <li>2% Centella asiatica extract, 2% Aloe vera extract, dan Allantoin merupakan kombinasi soothing agent yang membantu menenangkan kulit berjerawat dan membantu menenangkan kulit kemerahan.</li>
+                        <br>
+                        <li>2% Licorice extract merupakan soothing agent yang juga membantu mencerahkan kulit dan bekas jerawat.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>CLEAR & COVER SERUM CONCEALER</h1>
+                        <p>Clear & Cover Serum Concealer adalah lightweight concealer dengan medium to full coverage, no creasing, blendable, dan memiliki kemampuan oil control yang cocok untuk semua jenis kulit termasuk kulit sensitif & berjerawat. Concealer ini membantu menyamarkan tampilan noda bekas jerawat, flek, dark circle, kemerahan pada wajah dan juga membantu meratakan warna kulit yang tidak merata. Diperkaya dengan skincare benefit yang membantu merawat kulit berjerawat. Menghasilkan makeup dengan tampilan yang semi matte finish dan long lasting.</p>
+                        <p> SHADES:</p>
+                        <ul>
+                            <li> Light : Light, neutral undertone.</li>
+                            <li> Medium : medium, warm undertone.</li>
+                            <li> Tan : medium to tan, warm undertone.</li>
+                        </ul>
+                        <p>With Tea Tree Oil, Salicylic Acid, Centella Asiatica Extract, Licorice Extract, Aloe Vera Extract, Allantoin, Hyaluronic Acid, Panthenol, & Tranexamoyl Dipeptide-23.</p>
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Oleskan secukupnya pada bagian wajah yang diinginkan.</li>
+                        <br>
+                        <li> Tepuk-tepuk dan ratakan dengan jari atau spons.</li>
+                        <br>
+                        <li> Simpan di tempat yang sejuk, tutup rapat untuk mencegah kebocoran dan kering.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>CLEAR & COVER SERUM CONCEALER</h1>
+                        <p>Clear & Cover Serum Concealer adalah lightweight concealer dengan medium to full coverage, no creasing, blendable, dan memiliki kemampuan oil control yang cocok untuk semua jenis kulit termasuk kulit sensitif & berjerawat. Concealer ini membantu menyamarkan tampilan noda bekas jerawat, flek, dark circle, kemerahan pada wajah dan juga membantu meratakan warna kulit yang tidak merata. Diperkaya dengan skincare benefit yang membantu merawat kulit berjerawat. Menghasilkan makeup dengan tampilan yang semi matte finish dan long lasting.</p>
+                        <p> SHADES:</p>
+                        <ul>
+                            <li> Light : Light, neutral undertone.</li>
+                            <li> Medium : medium, warm undertone.</li>
+                            <li> Tan : medium to tan, warm undertone.</li>
+                        </ul>
+                        <p>With Tea Tree Oil, Salicylic Acid, Centella Asiatica Extract, Licorice Extract, Aloe Vera Extract, Allantoin, Hyaluronic Acid, Panthenol, & Tranexamoyl Dipeptide-23.</p>
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/makeup-series/serum concealer/4.png">
+                            <img src="/product-detail/makeup-series/serum concealer/5.png">
+                            <img src="/product-detail/makeup-series/serum concealer/6.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+            <h1>CLEAR & COVER SERUM CONCEALER</h1>
+            <p>Clear & Cover Serum Concealer adalah lightweight concealer dengan medium to full coverage, no creasing, blendable, dan memiliki kemampuan oil control yang cocok untuk semua jenis kulit termasuk kulit sensitif & berjerawat. Concealer ini membantu menyamarkan tampilan noda bekas jerawat, flek, dark circle, kemerahan pada wajah dan juga membantu meratakan warna kulit yang tidak merata. Diperkaya dengan skincare benefit yang membantu merawat kulit berjerawat. Menghasilkan makeup dengan tampilan yang semi matte finish dan long lasting.</p>
+            <p> SHADES:</p>
+            <ul>
+                <li> Light : Light, neutral undertone.</li>
+                <li> Medium : medium, warm undertone.</li>
+                <li> Tan : medium to tan, warm undertone.</li>
+            </ul>
+            <p>With Tea Tree Oil, Salicylic Acid, Centella Asiatica Extract, Licorice Extract, Aloe Vera Extract, Allantoin, Hyaluronic Acid, Panthenol, & Tranexamoyl Dipeptide-23.</p>
+
+            <div class="images-container">
+                <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+            </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/makeup-series/serum concealer/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+                    
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/5.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/6.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/7.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/8.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/9.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/serum concealer/10.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

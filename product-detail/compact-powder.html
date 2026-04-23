@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>MATTE BLUR SET TRANSLUCENT COMPACT POWDER</h1>
+                        <p>Matte Blur Set Translucent Compact Powder adalah bedak padat dengan partikel yang halus dan lembut dapat membantu menyamarkan pori-pori & garis halus pada kulit agar terlihat halus dan matte serta mampu menahan makeup lebih lama dan memberikan efek airbrushed. Bedak ini adalah translucent compact powder yang bisa digunakan untuk semua warna kulit. Mengandung Salicylic Acid, Centella Asiatica & Tea Tree serta tidak mengandung parfum tambahan. Dapat digunakan untuk semua jenis kulit termasuk kulit berjerawat.</p>
+                        <ul>
+                            <li> Oil control up to 8 jam</li>
+                            <li> Finish matte & smudgeproof</li>
+                            <li> Bikin kulit halus, flawless, dan pori-pori pun tersamarkan</li>
+                            <li> Include puff & cermin untuk memudahkan dibawa kemana saja tanpa khawatir bedaknya pecah</li>
+                            <li> Warna shade translucent atau transparan</li>
+                        </ul>            
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li>Kombinasi Salicylic Acid & Tea Tree Oil: Membantu merawat jerawat.</li>
+                        <br>
+                        <li>Tocopharyl Acetate: Kaya akan antioksidan yang dapat melindungi kulit dari radikal bebas.</li>
+                        <br>
+                        <li>Centella Asiatica extract: Membantu menenangkan kulit, meredakan kemerahan & jerawat.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>MATTE BLUR SET TRANSLUCENT COMPACT POWDER</h1>
+                        <p>Matte Blur Set Translucent Compact Powder adalah bedak padat dengan partikel yang halus dan lembut dapat membantu menyamarkan pori-pori & garis halus pada kulit agar terlihat halus dan matte serta mampu menahan makeup lebih lama dan memberikan efek airbrushed. Bedak ini adalah translucent compact powder yang bisa digunakan untuk semua warna kulit. Mengandung Salicylic Acid, Centella Asiatica & Tea Tree serta tidak mengandung parfum tambahan. Dapat digunakan untuk semua jenis kulit termasuk kulit berjerawat.</p>
+                        <ul>
+                            <li> Oil control up to 8 jam</li>
+                            <li> Finish matte & smudgeproof</li>
+                            <li> Bikin kulit halus, flawless, dan pori-pori pun tersamarkan</li>
+                            <li> Include puff & cermin untuk memudahkan dibawa kemana saja tanpa khawatir bedaknya pecah</li>
+                            <li> Warna shade translucent atau transparan</li>
+                        </ul>            
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Oleskan secukupnya pada bagian wajah yang diinginkan.</li>
+                        <br>
+                        <li> Tepuk-tepuk dan ratakan dengan jari atau spons.</li>
+                        <br>
+                        <li> Simpan di tempat yang sejuk, tutup rapat untuk mencegah kebocoran dan kering.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>MATTE BLUR SET TRANSLUCENT COMPACT POWDER</h1>
+                        <p>Matte Blur Set Translucent Compact Powder adalah bedak padat dengan partikel yang halus dan lembut dapat membantu menyamarkan pori-pori & garis halus pada kulit agar terlihat halus dan matte serta mampu menahan makeup lebih lama dan memberikan efek airbrushed. Bedak ini adalah translucent compact powder yang bisa digunakan untuk semua warna kulit. Mengandung Salicylic Acid, Centella Asiatica & Tea Tree serta tidak mengandung parfum tambahan. Dapat digunakan untuk semua jenis kulit termasuk kulit berjerawat.</p>
+                        <ul>
+                            <li> Oil control up to 8 jam</li>
+                            <li> Finish matte & smudgeproof</li>
+                            <li> Bikin kulit halus, flawless, dan pori-pori pun tersamarkan</li>
+                            <li> Include puff & cermin untuk memudahkan dibawa kemana saja tanpa khawatir bedaknya pecah</li>
+                            <li> Warna shade translucent atau transparan</li>
+                        </ul>            
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/makeup-series/Compact Powder/4.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+                        <h1>MATTE BLUR SET TRANSLUCENT COMPACT POWDER</h1>
+                        <p>Matte Blur Set Translucent Compact Powder adalah bedak padat dengan partikel yang halus dan lembut dapat membantu menyamarkan pori-pori & garis halus pada kulit agar terlihat halus dan matte serta mampu menahan makeup lebih lama dan memberikan efek airbrushed. Bedak ini adalah translucent compact powder yang bisa digunakan untuk semua warna kulit. Mengandung Salicylic Acid, Centella Asiatica & Tea Tree serta tidak mengandung parfum tambahan. Dapat digunakan untuk semua jenis kulit termasuk kulit berjerawat.</p>
+                        <ul>
+                            <li> Oil control up to 8 jam</li>
+                            <li> Finish matte & smudgeproof</li>
+                            <li> Bikin kulit halus, flawless, dan pori-pori pun tersamarkan</li>
+                            <li> Include puff & cermin untuk memudahkan dibawa kemana saja tanpa khawatir bedaknya pecah</li>
+                            <li> Warna shade translucent atau transparan</li>
+                        </ul>            
+            <div class="images-container">
+                <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+            </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/makeup-series/Compact Powder/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/Compact Powder/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/Compact Powder/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/Compact Powder/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/Compact Powder/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+                    
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/makeup-series/Compact Powder/5.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>EAU DE PARFUM WHITE</h1>
+                        <p>You will love wearing this in summer. Like after spending some time in sunny sun and having a memorable shower after while wearing flowy white pajama with white towel on head. It will make you feel clean and cool despite the soaring heat and sweat.</p>
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li>Main Accords : Floral, Fresh, Woody, Aldehydic, Earthy, Powdery, White Floral, Green, Aromatic, Iris
+                        </li>
+                        <br>
+                        <li>Top Notes : Bergamot, Pink Pepper, Aldehydes, Fig
+                        </li>
+                        <br>
+                        <li>Middle Notes : Rose, Ylang-Ylang, Lavender, Iris, Violet, Geranium, Carnation, Hyacinth, Orchid
+                        </li>
+                        <br>
+                        <li>Base Notes : Patchouli, Sandalwood, Vetiver, Vanilla, Cashmeran, Oakmoss, Tonka Bean
+                        </li>
+                    </ol> 
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>EAU DE PARFUM WHITE</h1>
+                        <p>You will love wearing this in summer. Like after spending some time in sunny sun and having a memorable shower after while wearing flowy white pajama with white towel on head. It will make you feel clean and cool despite the soaring heat and sweat.</p>
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <p>Apply perfume to the body pulse points only, such as on the</p>
+                    <ul>
+                        <li>wrists</li>
+                        <br>
+                        <li>inner elbows</li>
+                        <br>
+                        <li>around the neck</li>
+                        <br>
+                        <li>under the stomach</li>
+                        <br>
+                        <li>behind the knees</li>
+                        <br>
+                        <li>on the ankles</li>
+                        <br>
+                        <li>and on the calves</li>
+                    </ul>
+                    <p> as these parts tend to have higher body temperature which help to spread the perfume scent throughout the body.</p>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">Little Tip</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+            <h1>EAU DE PARFUM WHITE</h1>
+            <p>You will love wearing this in summer. Like after spending some time in sunny sun and having a memorable shower after while wearing flowy white pajama with white towel on head. It will make you feel clean and cool despite the soaring heat and sweat.</p>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/perfume-series/EDP WHITE/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/perfume-series/EDP WHITE/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/perfume-series/EDP WHITE/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/perfume-series/EDP WHITE/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/perfume-series/EDP WHITE/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/perfume-series/EDP WHITE/5.png" alt="Product Image"
+                        class="image">
+                    </div>
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/perfume-series/EDP WHITE/6.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

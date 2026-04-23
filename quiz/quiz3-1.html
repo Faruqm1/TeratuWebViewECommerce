@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skincare Quiz</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800&display=swap" rel="stylesheet">   
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .image-container {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 505px;
+        }
+
+        .horizontal-bar {
+            position: fixed;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1140px;
+            height: 14px;
+            background-color: black;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .overlay-img {
+            position: absolute;
+            top: -10px;
+            width: 34px;
+            height: 34px;
+        }
+
+        .overlay-img-1 {
+            left: 40px;
+        }
+        .overlay-img-2 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px); /* Position the second overlay image with 172px gap */
+        }
+        .overlay-img-3 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px); /* Position the third overlay image */
+        }
+        .overlay-img-4 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px); /* Position the fourth overlay image */
+        }
+        .overlay-img-5 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px); /* Position the fourth overlay image */
+        }
+        .overlay-img-6 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px); 
+        }
+
+        .text-container {
+            position: fixed;
+            top: 235px; /* 120px (bar) + 50px (gap) */
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 600;
+            font-size: 26pt;
+            text-align: center;
+        }
+
+        .button-container {
+            position: fixed;
+            top: 350px; /* 150px (text) + 50px (gap) */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .button-container button {
+            width: 308px;
+            height: 63px;
+            font-size: 16pt;
+            font-family: 'poppins',sans-serif;
+            color: black;
+            background-color: #F2F2F2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container button:hover {
+            background-color: white;
+        }
+
+        .img-row {
+            position: fixed;
+            bottom: 24px; /* Jarak dari bawah viewport */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 50px;
+        }
+
+        .img-row img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/skinquiz.png" alt="Skin Quiz">
+    </div>
+
+    <div class="horizontal-bar">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-1">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-2">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-3">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-4">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-5">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-6">
+    </div>
+
+    <div class="text-container">
+        Berapa rentang usia kamu?
+    </div>
+
+    <div class="button-container">
+        <button onclick="location.href='quiz3-2.html'">18-20 tahun</button>
+        <button onclick="location.href='quiz3-2.html'">21-25 tahun</button>
+        <button onclick="location.href='quiz3-2.html'">25-30 tahun</button>
+    </div>
+
+    <div class="img-row">
+        <a href="../index.html">
+            <img src="img/Button-left.png" alt="Image 1">
+        </a>
+        <a href="quiz3-2.html">
+            <img src="img/Button-right.png" alt="Image 2">
+        </a>
+    </div>
+</body>
+</html>

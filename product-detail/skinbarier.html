@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>SKIN BARIER SERUM</h1>
+                        <p>Skin Barrier Serum adalah serum yang diformulasikan untuk menyembuhkan skin barrier yang rusak, meredakan kemerahan akibat iritasi, menyamarkan dark spots sekaligus mencerahkan, menutrisi, dan melembutkan kulit. Skin Barrier Serum ini sangat cocok digunakan ketika wajah sedang breakout maupun untuk mencegah breakout datang kembali.
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li> Kombinasi Niacinamade & Ceramide : Sebagai Skin Barrier Reparation.</li> 
+                        <br>
+                        <li> Kombinasi Centella Asiatica extract, Tea Tree Leaf Extract : Sebagai Acne Treatment.</li> 
+                        <br>
+                        <li> Kombinasi Broccoli Sprout Extract, Rapeseed Sprout Extract, Brussels Sprouts Extract, Sunflower Sprout Extract, Calendula Flower extract, dan Neem Extract : Sebagai anti inflamasi dan antioksidan.</li>
+                        <br>
+                        <li> Kombinasi Panthenol & Saccharide Isomerate : Sebagai Fermented Active, menjaga keseimbangan dan kelembaban kulit, mengurangi peradangan dan iritasi, melawan bakteri yang ada di permukaan kulit, serta berperan untuk menyembuhkan kulit yang rusak.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>SKIN BARIER SERUM</h1>
+                        <p>Skin Barrier Serum adalah serum yang diformulasikan untuk menyembuhkan skin barrier yang rusak, meredakan kemerahan akibat iritasi, menyamarkan dark spots sekaligus mencerahkan, menutrisi, dan melembutkan kulit. Skin Barrier Serum ini sangat cocok digunakan ketika wajah sedang breakout maupun untuk mencegah breakout datang kembali.
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Tuangkan serum secukupnya 2-5 tetes untuk seluruh wajah.</li>
+                        <br>
+                        <li> Baurkan secara perlahan pada kulit wajah yang sudah dibersihkan.</li>
+                        <br>
+                        <li> Dapat digunakan setiap hari, pagi dan malam.</li>
+                    </ol> 
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>SKIN BARIER SERUM</h1>
+                        <p>Skin Barrier Serum adalah serum yang diformulasikan untuk menyembuhkan skin barrier yang rusak, meredakan kemerahan akibat iritasi, menyamarkan dark spots sekaligus mencerahkan, menutrisi, dan melembutkan kulit. Skin Barrier Serum ini sangat cocok digunakan ketika wajah sedang breakout maupun untuk mencegah breakout datang kembali.
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/skincare/Skin Barrier Serum/5.png">
+                            <img src="/product-detail/skincare/Skin Barrier Serum/6.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+                        <h1>SKIN BARIER SERUM</h1>
+                        <p>Skin Barrier Serum adalah serum yang diformulasikan untuk menyembuhkan skin barrier yang rusak, meredakan kemerahan akibat iritasi, menyamarkan dark spots sekaligus mencerahkan, menutrisi, dan melembutkan kulit. Skin Barrier Serum ini sangat cocok digunakan ketika wajah sedang breakout maupun untuk mencegah breakout datang kembali.
+                        </p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/skincare/Skin Barrier Serum/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Skin Barrier Serum/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Skin Barrier Serum/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Skin Barrier Serum/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Skin Barrier Serum/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

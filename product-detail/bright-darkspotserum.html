@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>BRIGHTENING & DARK SPOT SERUM</h1>
+                        <p>Brightening Dark Spot Serum diformulasikan untuk membantu mencerahkan kulit, melembabkan, menyamarkan noda bekas jerawat dan noda hitam sehingga wajah tampak cerah merata.</p>
+                        <ul>
+                            <li> Mencerahkan tone kulit.</li>
+                            <li> Memudarkan bekas jerawat kemerahan PIE.</li>
+                            <li> Memudarkan bekas jerawat kehitaman PIH.</li>
+                            <li> Memudarkan noda dan flek hitam di wajah.</li>
+                            <li> Menenangkan (soothing) & melembabkan kulit (hydrating).</li>
+                        </ul>
+                        <p>With Alpha Arbutin, Melazero (Award Winning Whitening Agent), Tranexamoyl dipeptide-23, Multifunctional whitening agent (Peony Root Extract, Chinese Skullcap Extract, Saxifrage Extract, Acetyl Tyrosine, Arbutin, Glutathione, Vitamin C) & Niacinamide.</p>
+
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li>Alpha Arbutin : Anti inflamasi, membantu melindungi kulit dari bahaya sinar UV dan radikal bebas.</li>
+                        <br>
+                        <li>Melazero : Memutihkan dalam waktu singkat (2 minggu) menghambat sintesis melanin, gentle, dan cenderung tidak menyebabkan iritasi, menghambat pembentukan dark spot.</li>
+                        <br>
+                        <li>Tranexamoyl dipeptide-23 : Berperan dalam memberikan efek mencerahkan kulit.</li>
+                        <br>
+                        <li>Niacinamide : sebagai anti-aging, memperbaiki skin barrier, mencerahkan, mengatasi hiperpigmentasi dan menyamakan warna kulit, membantu menyamarkan garis dan kerutan, meningkatkan elastisitas kulit (kenyal),</li>
+                        <br>
+                        <li>Multifunctional Whitening Agent (Peony Root Extract, Chinese Skullcap Extract, Saxifrage Sarmentosa Extract, Acetly Tyrosine, Arbutin, Glutathione, Vitamin C) : Efektif menghambat pembentukan melamin berlebih tanpa efek samping. Mampu meminimalisir pembentukan noda hitam pada kulit dan mencerahkan & meratakan tone kulit.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>BRIGHTENING & DARK SPOT SERUM</h1>
+                        <p>Brightening Dark Spot Serum diformulasikan untuk membantu mencerahkan kulit, melembabkan, menyamarkan noda bekas jerawat dan noda hitam sehingga wajah tampak cerah merata.</p>
+                        <ul>
+                            <li> Mencerahkan tone kulit.</li>
+                            <li> Memudarkan bekas jerawat kemerahan PIE.</li>
+                            <li> Memudarkan bekas jerawat kehitaman PIH.</li>
+                            <li> Memudarkan noda dan flek hitam di wajah.</li>
+                            <li> Menenangkan (soothing) & melembabkan kulit (hydrating).</li>
+                        </ul>
+                        <p>With Alpha Arbutin, Melazero (Award Winning Whitening Agent), Tranexamoyl dipeptide-23, Multifunctional whitening agent (Peony Root Extract, Chinese Skullcap Extract, Saxifrage Extract, Acetyl Tyrosine, Arbutin, Glutathione, Vitamin C) & Niacinamide.</p>
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Tuangkan serum secukupnya 2-5 tetes untuk seluruh wajah. </li>
+                        <br>
+                        <li> Baurkan secara perlahan pada kulit wajah yang sudah dibersihkan. </li>
+                        <br>
+                        <li> Dapat digunakan setiap hari, pagi dan malam.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>BRIGHTENING & DARK SPOT SERUM</h1>
+                        <p>Brightening Dark Spot Serum diformulasikan untuk membantu mencerahkan kulit, melembabkan, menyamarkan noda bekas jerawat dan noda hitam sehingga wajah tampak cerah merata.</p>
+                        <ul>
+                            <li> Mencerahkan tone kulit.</li>
+                            <li> Memudarkan bekas jerawat kemerahan PIE.</li>
+                            <li> Memudarkan bekas jerawat kehitaman PIH.</li>
+                            <li> Memudarkan noda dan flek hitam di wajah.</li>
+                            <li> Menenangkan (soothing) & melembabkan kulit (hydrating).</li>
+                        </ul>
+                        <p>With Alpha Arbutin, Melazero (Award Winning Whitening Agent), Tranexamoyl dipeptide-23, Multifunctional whitening agent (Peony Root Extract, Chinese Skullcap Extract, Saxifrage Extract, Acetyl Tyrosine, Arbutin, Glutathione, Vitamin C) & Niacinamide.</p>
+
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/skincare/Brightening & Dark Spot Serum/7.png">
+                            <img src="/product-detail/skincare/Brightening & Dark Spot Serum/8.png">
+                            <img src="/product-detail/skincare/Brightening & Dark Spot Serum/9.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+            <h1>BRIGHTENING & DARK SPOT SERUM</h1>
+            <p>Brightening Dark Spot Serum diformulasikan untuk membantu mencerahkan kulit, melembabkan, menyamarkan noda bekas jerawat dan noda hitam sehingga wajah tampak cerah merata.</p>
+            <ul>
+                <li> Mencerahkan tone kulit.</li>
+                <li> Memudarkan bekas jerawat kemerahan PIE.</li>
+                <li> Memudarkan bekas jerawat kehitaman PIH.</li>
+                <li> Memudarkan noda dan flek hitam di wajah.</li>
+                <li> Menenangkan (soothing) & melembabkan kulit (hydrating).</li>
+            </ul>
+            <p>With Alpha Arbutin, Melazero (Award Winning Whitening Agent), Tranexamoyl dipeptide-23, Multifunctional whitening agent (Peony Root Extract, Chinese Skullcap Extract, Saxifrage Extract, Acetyl Tyrosine, Arbutin, Glutathione, Vitamin C) & Niacinamide.</p>
+
+            <div class="images-container">
+                <img src="/product-detail/information Logo/age16.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+            </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/skincare/Brightening & Dark Spot Serum/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Brightening & Dark Spot Serum/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Brightening & Dark Spot Serum/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Brightening & Dark Spot Serum/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Brightening & Dark Spot Serum/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+                    
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Brightening & Dark Spot Serum/5.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Brightening & Dark Spot Serum/6.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

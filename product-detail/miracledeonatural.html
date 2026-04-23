@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>MIRACLE DEO NATURAL ROLL ON</h1>
+                        <p>Miracle Deo Natural Roll On merupakan deodorant natural yang mengandung anti bakterial dari kombinasi Piper Betle Leaf Extract dan Lemon Extract  untuk membantu mengurangi bau badan dengan mengurangi pertumbuhan bakteri penyebab bau badan. Dilengkapi dengan Aloe Vera Extract untuk menjaga kelembaban kulit ketiak & sebagai soothing agent sehingga terasa halus.</p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li> Piper Betle Leaf Extract : membantu mengatasi bau badan karena memiliki kemampuan antibakteri sehingga mampu mengurangi bakteri penyebab bau badan. Mengandung senyawa fenolik, salah satunya Chavicol yang mampu menghambat pertumbuhan bakteri dengan merusak lapisan membran sel bakteri.
+                        </li>
+                        <br>
+                        <li> Lemon (Citrus Medica Limonum) Extract : membantu mengatasi bau badan dan membantu mencerahkan kulit ketiak. Ekstrak lemon memiliki kemampuan antibakteri sehingga dapat membantu menghambat pertumbuhan dan mengurangi bakteri penyebab bau badan. Selain itu juga dapat membantu mencerahkan kulit dengan menghambat pembentukan melanin pada kulit dan menghambat aktivitas enzim tirosinase.
+                        </li>
+                        <br>
+                        <li> Aloe Vera Leaf Extract : membantu menjaga kelembaban kulit ketiak dan menenangkan kulit. Ekstrak lidah buaya juga berperan sebagai anti inflamasi dan dapat membantu menyejukan dan menghidrasi kulit dengan meningkatkan kemampuan pengikatan molekul air dalam kulit.
+                        </li>
+                    </ol> 
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>MIRACLE DEO NATURAL ROLL ON</h1>
+                        <p>Miracle Deo Natural Roll On merupakan deodorant natural yang mengandung anti bakterial dari kombinasi Piper Betle Leaf Extract dan Lemon Extract  untuk membantu mengurangi bau badan dengan mengurangi pertumbuhan bakteri penyebab bau badan. Dilengkapi dengan Aloe Vera Extract untuk menjaga kelembaban kulit ketiak & sebagai soothing agent sehingga terasa halus.</p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Sebelum menggunakan produk pastikan lapisan shield pelindung produk telah dibuka.</li> 
+                        <br>
+                        <li> Oleskan produk secara merata pada kulit ketiak yang bersih dan kering.</li> 
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>MIRACLE DEO NATURAL ROLL ON</h1>
+                        <p>Miracle Deo Natural Roll On merupakan deodorant natural yang mengandung anti bakterial dari kombinasi Piper Betle Leaf Extract dan Lemon Extract  untuk membantu mengurangi bau badan dengan mengurangi pertumbuhan bakteri penyebab bau badan. Dilengkapi dengan Aloe Vera Extract untuk menjaga kelembaban kulit ketiak & sebagai soothing agent sehingga terasa halus.</p>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/bodycare/Miracle Deo Natural Roll On/5.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+            <h1>MIRACLE DEO NATURAL ROLL ON</h1>
+            <p>Miracle Deo Natural Roll Onmerupakan deodorant natural yang mengandung anti bakterial dari kombinasi Piper Betle Leaf Extract dan Lemon Extract  untuk membantu mengurangi bau badan dengan mengurangi pertumbuhan bakteri penyebab bau badan. Dilengkapi dengan Aloe Vera Extract untuk menjaga kelembaban kulit ketiak & sebagai soothing agent sehingga terasa halus.</p>
+            <div class="images-container">
+                <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+            </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/bodycare/Miracle Deo Natural Roll On/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/bodycare/Miracle Deo Natural Roll On/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/bodycare/Miracle Deo Natural Roll On/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/bodycare/Miracle Deo Natural Roll On/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/bodycare/Miracle Deo Natural Roll On/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

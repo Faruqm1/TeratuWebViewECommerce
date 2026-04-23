@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teratu Beauty</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">   
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="productdetailstyles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadHTML('#header', '../header.html');
+            loadHTML('#footer', '../footer.html');
+          
+           const buttons = document.querySelectorAll('.button');
+            const textContent = document.getElementById('text-content');
+            let currentActiveButton = null;
+
+            function updateContent(buttonId, title, content) {
+                buttons.forEach(button => button.classList.remove('active'));
+
+                textContent.innerHTML = `
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                `;
+
+                document.getElementById(buttonId).classList.add('active');
+                currentActiveButton = buttonId;
+            }
+
+            document.getElementById('ingredient').addEventListener('click', function() {
+                if (currentActiveButton === 'ingredient') {
+                    textContent.innerHTML =  `
+                        <h1>DAILY CALM SKIN MOISTURIZER</h1>
+                        <p>Daily Calm Skin Moisturizer adalah krim pelembab kulit yang dapat digunakan pada area wajah & badan. Produk ini mempunyai formula yang unik karena mengandung shea butter & hyaluronic acid yang membantu merawat kelembaban kulit. Diperkaya dengan Brightenyl   yang membantu mencerahkan kulit wajah. Selain itu, formulanya mengandung Ceramide yang dapat menjaga kesehatan skin barrier dan Centella astiatica yang membantu menyejukkan kulit.</p>
+                        <ul>
+                            <li> Melembabkan sekaligus menenangkan kulit dari rasa gatal, kemerahan, mengelupas, iritasi, dll.</li>
+                            <li> Bisa digunakan untuk semua jenis kulit termasuk sensitive skin.</li>
+                            <li> Memperbaiki & memperkuat skin barrier.</li>
+                            <li> Aman dilayer dengan berbagai active ingredients.</li>
+                            <li> Bisa digunakan untuk eksim, dermatitis, dan rosacea.</li>
+                        </ul>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('ingredient', 'KEY INGREDIENT', `
+                    <ol>
+                        <li> Brightenyl (glycerin dan Diglucosyl Gallic Acid) : Mencerahkan kulit, anti-inflamasi, melindungi kulit dari sinar UV, mengatasi hiperpigmentasi, melindungi dan mencegah kulit meradang dan iritasi.</li> 
+                        <br>
+                        <li> Hyaluronic Acid :  Melembabkan, membantu menyamarkan garis halus dan kerutan, membuat kulit terasa lebih kenyal</li> 
+                        <br>
+                        <li> Centella Asiatica :  Sebagai agen anti-inflamasi, membantu mempercepat peyembuhan bekas jerawat, serta dapat membantu mengontrol jerawat.</li>
+                        <br>
+                        <li> Ceramide : Melembabkkan kulit dan membantu memperbaiki skin barrier kulit.</li>
+                        <br>
+                        <li> Shea Butter : Sebagai emollient yang dapat melembutkan, menenangkan, dan melembabkan kulit.</li>
+                    </ol> 
+                    `);
+                }
+            });
+
+            document.getElementById('how-to-use').addEventListener('click', function() {
+                if (currentActiveButton === 'how-to-use') {
+                    textContent.innerHTML = `
+                        <h1>DAILY CALM SKIN MOISTURIZER</h1>
+                        <p>Daily Calm Skin Moisturizer adalah krim pelembab kulit yang dapat digunakan pada area wajah & badan. Produk ini mempunyai formula yang unik karena mengandung shea butter & hyaluronic acid yang membantu merawat kelembaban kulit. Diperkaya dengan Brightenyl   yang membantu mencerahkan kulit wajah. Selain itu, formulanya mengandung Ceramide yang dapat menjaga kesehatan skin barrier dan Centella astiatica yang membantu menyejukkan kulit.</p>
+                        <ul>
+                            <li> Melembabkan sekaligus menenangkan kulit dari rasa gatal, kemerahan, mengelupas, iritasi, dll.</li>
+                            <li> Bisa digunakan untuk semua jenis kulit termasuk sensitive skin.</li>
+                            <li> Memperbaiki & memperkuat skin barrier.</li>
+                            <li> Aman dilayer dengan berbagai active ingredients.</li>
+                            <li> Bisa digunakan untuk eksim, dermatitis, dan rosacea.</li>
+                        </ul>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('how-to-use', 'HOW TO USE', `
+                    <ol>
+                        <li> Ambil beberapa pump sesuai kebutuhan kulit.</li>
+                        <br>
+                        <li> Aplikasikan produk dikulit wajah dan badan yang membutuhkan kelembaban.</li>
+                        <br>
+                        <li> Pijat ringan hingga produk terserap merata.</li>
+                        <br>
+                        <li> Dapat digunakan siang dan malam hari.</li>
+                        <br>
+                        <li> Bisa digunakan untuk kulit wajah maupun tubuh.</li>
+                    </ol>
+                    `);
+                }
+            });
+
+            document.getElementById('testimoni').addEventListener('click', function() {
+                if (currentActiveButton === 'testimoni') {
+                    textContent.innerHTML =  `
+                        <h1>DAILY CALM SKIN MOISTURIZER</h1>
+                        <p>Daily Calm Skin Moisturizer adalah krim pelembab kulit yang dapat digunakan pada area wajah & badan. Produk ini mempunyai formula yang unik karena mengandung shea butter & hyaluronic acid yang membantu merawat kelembaban kulit. Diperkaya dengan Brightenyl   yang membantu mencerahkan kulit wajah. Selain itu, formulanya mengandung Ceramide yang dapat menjaga kesehatan skin barrier dan Centella astiatica yang membantu menyejukkan kulit.</p>
+                        <ul>
+                            <li> Melembabkan sekaligus menenangkan kulit dari rasa gatal, kemerahan, mengelupas, iritasi, dll.</li>
+                            <li> Bisa digunakan untuk semua jenis kulit termasuk sensitive skin.</li>
+                            <li> Memperbaiki & memperkuat skin barrier.</li>
+                            <li> Aman dilayer dengan berbagai active ingredients.</li>
+                            <li> Bisa digunakan untuk eksim, dermatitis, dan rosacea.</li>
+                        </ul>
+                        <div class="images-container">
+                            <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                            <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+                        </div>   
+                    `;
+                    buttons.forEach(button => button.classList.remove('active'));
+                    currentActiveButton = null;
+                } else {
+                    updateContent('testimoni', 'TESTIMONI', `
+                        <div class="testimoni">
+                            <img src="/product-detail/skincare/Moisturizer/7.png">
+                            <img src="/product-detail/skincare/Moisturizer/8.png">
+                        </div>
+                    `);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="ingredient" class="button">ingredient</button>
+            <button id="how-to-use" class="button">How to Use</button>
+            <button id="testimoni" class="button">Testimoni</button>
+        </div>    
+
+        <div class="text-content" id="text-content">
+            <h1>DAILY CALM SKIN MOISTURIZER</h1>
+            <p>Daily Calm Skin Moisturizer adalah krim pelembab kulit yang dapat digunakan pada area wajah & badan. Produk ini mempunyai formula yang unik karena mengandung shea butter & hyaluronic acid yang membantu merawat kelembaban kulit. Diperkaya dengan Brightenyl   yang membantu mencerahkan kulit wajah. Selain itu, formulanya mengandung Ceramide yang dapat menjaga kesehatan skin barrier dan Centella astiatica yang membantu menyejukkan kulit.</p>
+            <ul>
+                <li> Melembabkan sekaligus menenangkan kulit dari rasa gatal, kemerahan, mengelupas, iritasi, dll.</li>
+                <li> Bisa digunakan untuk semua jenis kulit termasuk sensitive skin.</li>
+                <li> Memperbaiki & memperkuat skin barrier.</li>
+                <li> Aman dilayer dengan berbagai active ingredients.</li>
+                <li> Bisa digunakan untuk eksim, dermatitis, dan rosacea.</li>
+            </ul>
+            <div class="images-container">
+                <img src="/product-detail/information Logo/age12.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/allskin.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freealc.png" alt="Description" class="logo-img">
+                <img src="/proliuct-detail/information Logo/freepar.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/safe.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/freefrag.png" alt="Description" class="logo-img">
+                <img src="/product-detail/information Logo/pao12.png" alt="Description" class="logo-img">
+            </div>
+        </div>
+
+        <div class="left swiper">
+            <div class="big-img">
+                <img src="/product-detail/skincare/Moisturizer/1.png" alt="Product Image">
+            </div>
+            <div class="slider-wrapper">
+                <button class="buttonprev">
+                    <img src="prevbtn.png" alt="Previous">
+                </button>
+
+                <button class="buttonnext">
+                    <img src="nextbtn.png" alt="Next">
+                </button>
+
+                <div class="card-list swiper-wrapper">
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Moisturizer/1.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Moisturizer/2.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Moisturizer/3.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Moisturizer/4.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Moisturizer/5.png" alt="Product Image"
+                        class="image">
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                        <img src="/product-detail/skincare/Moisturizer/6.png" alt="Product Image"
+                        class="image">
+                    </div>
+                </div>
+
+                <button class="shop-now-button">SHOP NOW</button>   
+            </div>
+
+        </div>      
+    </div>
+    <div id="footer"></div>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="productdetail.js"></script>
+</body>
+</html>

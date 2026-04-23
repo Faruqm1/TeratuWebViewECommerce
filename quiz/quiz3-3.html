@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skincare Quiz</title>
+    <link rel="icon" href="../img/logokcl.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .image-container {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 505px;
+        }
+
+        .horizontal-bar {
+            position: fixed;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1140px;
+            height: 14px;
+            background-color: black;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .overlay-img {
+            position: absolute;
+            top: -10px;
+            width: 34px;
+            height: 34px;
+        }
+
+        .overlay-img-1 {
+            left: 40px;
+        }
+        .overlay-img-2 {
+            left: calc(40px + 34px + 172px);
+        }
+        .overlay-img-3 {
+            left: calc(40px + 34px + 172px + 34px + 172px);
+        }
+        .overlay-img-4 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px);
+        }
+        .overlay-img-5 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px);
+        }
+        .overlay-img-6 {
+            filter: brightness(50%);
+            left: calc(40px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px + 34px + 172px); 
+        }
+
+        .text-container {
+            position: fixed;
+            top: 235px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 26pt;
+            text-align: center;
+            width: 100%; /* Ensure the container takes full width */
+            max-width: 1140px; /* Adjust this value as needed */
+            overflow: hidden; /* Hide overflow text */
+            white-space: nowrap; /* Prevent wrapping */
+            box-sizing: border-box;
+            margin-bottom: 50px;
+        }
+
+        .button-container {
+            position: relative;
+            top: 320px; /* Adjust the top position if needed */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center buttons horizontally */
+            gap: 35px; /* Space between rows of buttons */
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-wrapper img {
+            height: 170px; /* Height of the image */
+            margin-bottom: 12px; /* Space between image and button */
+        }
+
+        .button-container button {
+            width: 292px;
+            height: 60px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15pt;
+            text-align: center;
+            color: black;
+            background-color: #F2F2F2;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container button:hover {
+            background-color: white;
+        }
+
+        .img-row {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 50px;
+        }
+
+        .img-row img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/skinquiz.png" alt="Skin Quiz">
+    </div>
+
+    <div class="horizontal-bar">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-1">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-2">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-3">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-4">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-5">
+        <img src="img/square.png" alt="Overlay Image" class="overlay-img overlay-img-6">
+    </div>
+
+    <div class="text-container">
+        Apa jenis kulitmu?
+    </div>
+
+    <div class="button-container">
+        <div class="button-wrapper">
+            <img src="img/quiz3/Normal.png" alt="Image 1">
+            <button onclick="location.href='quiz3-4.html'">Kulit Normal</button>
+        </div>
+        <div class="button-wrapper">
+            <img src="img/quiz3/Berminyak.png" alt="Image 2">
+            <button onclick="location.href='quiz3-4.html'">Cenderung Berminyak</button>
+        </div>
+        <div class="button-wrapper">
+            <img src="img/quiz3/Kering.png" alt="Image 3">
+            <button onclick="location.href='quiz3-4.html'">Cenderung Kering</button>
+        </div>
+        <div class="button-wrapper">
+            <img src="img/quiz3/Kombinasi.png" alt="Image 4">
+            <button onclick="location.href='quiz3-4.html'">Kulit Kombinasi</button>
+        </div>
+    </div>
+
+    <div class="img-row">
+        <a href="quiz3-2.html">
+            <img src="img/Button-left.png" alt="Image 1">
+        </a>
+        <a href="quiz3-4.html">
+            <img src="img/Button-right.png" alt="Image 2">
+        </a>
+    </div>
+</body>
+</html>
