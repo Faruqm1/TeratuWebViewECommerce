@@ -145,7 +145,7 @@
     <script>
     function loadResultPage(result) {
         const resultContent = document.getElementById('result-content');
-        const resultFile = `/quiz/result/result-${result}.html`; // Construct the file name based on the result parameter
+        const resultFile = `result/result-${result}.html`; // Construct the file name based on the result parameter
 
         fetch(resultFile)
             .then(response => response.text())
